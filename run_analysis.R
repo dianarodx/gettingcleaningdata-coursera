@@ -53,7 +53,7 @@ names(extractData) <- gsub("-freq()", "Frequency", names(extractData))
 names(extractData) <- gsub("angle", "Angle", names(extractData))
 names(extractData) <- gsub("gravity", "Gravity", names(extractData))
 
-#independent tody data set wjth avg of each variable for each activity/subject
+#independent tidy data set wjth avg of each variable for each activity/subject
 finalData <- extractData %>% 
   group_by(subject, activity) %>% 
   summarise_all(funs(mean))
